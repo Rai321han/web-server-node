@@ -1,0 +1,26 @@
+<html lang="en"> 
+  <head> 
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="/js/app.js" defer></script> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css"> 
+  </head>
+  <body>
+    {{>header}}
+    <div class="main-content">
+      <form action="" class="mt-10">
+        <input type="text" placeholder="Enter city/country name" class="focus:outline-cyan-500 text-center font-semibold text-2xl text-gray-500 px-5 py-5 border border-2 w-full block rounded-lg">
+        <button class="hover:bg-cyan-800 shadow shadow-lg shadow-gray-300 py-3 px-5 text-xl mt-5 bg-cyan-500 text-white block mx-auto rounded-lg">Submit</button>
+      </form>
+      <div class="mt-10">
+        <p id="address" class="text-2xl text-gray-400 underline underline-offset-8 decoration-cyan-500"></p>
+        <p id="forecast" class="text-xl text-gray-500 italic border-x-4 mt-4 px-4"></p>
+      </div>
+    </div>
+    {{>footer}}
+  </body> 
+
+</html>
