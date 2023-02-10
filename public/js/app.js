@@ -19,7 +19,7 @@ const getPosition = function (position) {
 };
 
 const getDefaultWeather = function () {
-  const url = `http://localhost:3000/default?lat=${lat}&lng=${lng}`;
+  const url = `/default?lat=${lat}&lng=${lng}`;
   fetch(url).then((response) => {
     response.json().then((data) => {
       if (data.error) {
@@ -37,7 +37,7 @@ window.onload = getLocation;
 
 Addressform.addEventListener("submit", (e) => {
   e.preventDefault();
-  const url = "http://localhost:3000/weather?address=" + formInput.value;
+  const url = "/weather?address=" + formInput.value;
   fetch(url).then((response) => {
     response.json().then((data) => {
       if (data.error) {
